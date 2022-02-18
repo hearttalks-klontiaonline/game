@@ -1,5 +1,5 @@
 let gameInterval ;
-let duration = 600 ;
+let duration = 180 ;
 let score = 0;
 const backgroundMusic = document.querySelector('#background');
 const correctMusic = document.querySelector('#correct');
@@ -116,7 +116,7 @@ function tryAgain()
         card.classList.remove("flip");
         card.style.opacity = null
     });
-    duration = 600 ;
+    duration = 180 ;
 
     startTimer();
     startMusic();

@@ -306,6 +306,12 @@ main {
     background-color: rgba(0, 0, 0, .8);
     z-index: 999;
     padding: 2rem;
+    flex-flow: column;
+    background-image: url('../images/1x/Asset1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
 }
 
 .win-popup .popup-img {
@@ -313,20 +319,30 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    height: calc(100% - 50px);
 }
 .win-popup .popup-img img {
     width: 58vw;
     max-width: 1145px;
 }
-
+.win-popup .text-game {
+    margin-top: 0;
+}
+.win-popup .text-game .left-text {
+    width: 100%;
+}
+.win-popup .text-game .code {
+    position: relative;
+    right: 0;
+    bottom: 0;
+}
 .gameover-popup {
     display: none;
     text-align: center;
 }
 
 .win-popup {
-    display: none;
+    display: none
 }
 
 .try-again {
@@ -422,6 +438,10 @@ main {
 }
 
 @media (max-width:767px) {
+    .win-popup .popup-img {
+        height: calc(100% - 70px);
+    }
+    
     .gameover-popup .popup-img img {
         width: 90%;
     }
@@ -504,8 +524,15 @@ main {
     .memory-game {
         margin: 33vw auto 0;
     }
+    .win-popup .popup-img {
+        height: calc(100% - 90px);
+    }
 }
 @media (max-width:915px) and (orientation:landscape){
+    .win-popup .popup-img {
+        height: calc(100% - 20px);
+        padding-bottom: 10px;
+    }
     .gameover-popup .popup-img img {
         width: 48vw;
     }
@@ -526,6 +553,17 @@ main {
     .memory-game {
         margin: 26.8vw auto 0;
     }
+    .win-popup .popup-img {
+        height: calc(100% - 60px);
+        padding-bottom: 10px;
+    }
+}
+@media (max-width:656px) and (orientation:landscape){
+    .win-popup .popup-img img {
+        width: 50vw;
+    }
+    
+    
 }
 @media (max-width:568px) and (orientation:landscape){
     .memory-game {
