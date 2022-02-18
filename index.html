@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="./game-assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./game-assets/fonts/fonts.css">
+    <link rel="stylesheet" href="./game-assets/css/customAnimation.css">
+    <link rel="stylesheet" href="./game-assets/css/style.css">
+    <link rel="stylesheet" href="./game-assets/css/game.css">
+    <!-- <link rel="stylesheet" href="/assets/css/loading.css"> -->
+
+</head>
+
+<body>
+
+    <!-- login-page -->
+    <main class="login-page">
+        <div class="main-container">
+            <div class="content">
+                <form class="login-form" action="" method="post">
+                    <div class="form-group">
+                        <div class="game-logo">
+                            <img src="./game-assets/images/1x/Asset2.png" alt="image">
+                        </div>
+                        <button type="submit" class="login-btn">
+                            <img src="./game-assets/images/1x/Asset3.png" alt="btn" />
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </main>
+
+
+
+    <!-- game-page -->
+    <main id="game" class="game-page">
+        <div class="score-container">
+            <img src="./game-assets/images/1x/Asset5.png" alt="" class="img-fluid">
+            <div class="score">
+                4 /
+                <span id="score"> 0</span>
+            </div>
+        </div>
+        <div class="time-container">
+            <img src="./game-assets/images/1x/Asset6.png" alt="" class="img-fluid">
+            <div id="timer-num" class="time">
+                <span class="minuts">4</span>:<span class="seconds">49</span>
+            </div>
+        </div>
+        <section class="memory-game">
+            <div class="memory-card" data-framework="card1">
+                <img class="front-face" src="./game-assets/images/1x/Asset9.png" alt="card1" />
+                <img class="back-face" src="./game-assets/images/1x/Asset7.png" alt="front-img" />
+            </div>
+            <div class="memory-card" data-framework="card1">
+                <img class="front-face" src="./game-assets/images/1x/Asset9.png" alt="card1" />
+                <img class="back-face" src="./game-assets/images/1x/Asset7.png" alt="front-img" />
+            </div>
+
+            <div class="memory-card" data-framework="card2">
+                <img class="front-face" src="./game-assets/images/1x/Asset10.png" alt="card2" />
+                <img class="back-face" src="./game-assets/images/1x/Asset7.png" alt="front-img" />
+            </div>
+            <div class="memory-card" data-framework="card2">
+                <img class="front-face" src="./game-assets/images/1x/Asset10.png" alt="card2" />
+                <img class="back-face" src="./game-assets/images/1x/Asset7.png" alt="front-img" />
+            </div>
+
+            <div class="memory-card" data-framework="card3">
+                <img class="front-face" src="./game-assets/images/1x/Asset11.png" alt="card3" />
+                <img class="back-face" src="./game-assets/images/1x/Asset7.png" alt="front-img" />
+            </div>
+            <div class="memory-card" data-framework="card3">
+                <img class="front-face" src="./game-assets/images/1x/Asset11.png" alt="card3" />
+                <img class="back-face" src="./game-assets/images/1x/Asset7.png" alt="front-img" />
+            </div>
+
+            <div class="memory-card" data-framework="card4">
+                <img class="front-face" src="./game-assets/images/1x/Asset12.png" alt="card4" />
+                <img class="back-face" src="./game-assets/images/1x/Asset7.png" alt="front-img" />
+            </div>
+            <div class="memory-card" data-framework="card4">
+                <img class="front-face" src="./game-assets/images/1x/Asset12.png" alt="card4" />
+                <img class="back-face" src="./game-assets/images/1x/Asset7.png" alt="front-img" />
+            </div>
+
+        </section>
+        <!-- frame-img -->
+        <section class="frame-img">
+            <img src="./game-assets/images/1x/Asset8.png" class="img-fluid" alt="">
+        </section>
+        <div class="text-game">
+            <div class="left-text">
+                <p>
+                    *In the EMPEROR-Reduced® trial, a randomised, double-blind, parallel-group, placebo-controlled study
+                    of 3730 adult patients with HFrEF (NYHA class II, III, or IV and LVEF &#8804; 40%), the
+                    efficacy and safety of JARDIANCE 10 mg (n=1863) was evaluated vs placebo (n=1867) in addition to
+                    standard of care. The primary composite endpoint in the EMPEROR-Reduced® trial was
+                    a composite of CV death or HHF, analysed as time to the first event. The rate of the decline in eGFR
+                    was a prespecified secondary outcome of the EMPEROR-Reduced® trial.1,2
+                    #HR=0.75; 95% CI: 0.65, 0.86; p &#60; 0.001.1
+                    †Standard of care: All patients received appropriate treatments for heart failure, including
+                    diuretics, inhibitors of the renin-angiotensin system and neprilysin, beta blockers,
+                    mineralocorticoid
+                    receptor antagonists, and, when indicated, cardiac devices.1
+                    CI: confidence interval, CV: cardiovascular, eGFR: estimated glomerular filtration rate, HFrEF:
+                    heart failure with reduced ejection fraction, HHF: hospitalisation for heart failure, HR: hazard
+                    ratio, LVEF: left ventricular ejection fraction, NYHA: New York Heart Association, RRR: relative
+                    risk reduction.
+                </p>
+            </div>
+            <div class="left-text">
+                <p>
+                    <strong>REFERENCES</strong><br>
+                    1. Packer M, Anker SD, Butler J, et al; EMPEROR-Reduced Trial Investigators. Cardiovascular and
+                    renal outcomes with empagliflozin in heart failure. N Engl J Med. 2020;383(15):1413-1424.
+                    (EMPEOR-Reduced results and the publication’s Supplementary Appendix.)<br>
+
+                    2. Packer M, Anker SD, Butler J, et al. Influence of neprilysin inhibition on the effecacy and safety
+                    of empagliflozin in patients with chronic heart failure and a reduced ejection fraction:
+                    the EMPEROR-Rduced trial. Eur Heart J.2021;42(6):671-680.<br>
+                    3. JARDIANCE [summary of product characteristics]. Ingelheim am Rhein, Germany: Boehringer Ingelheim
+                    International GmbH; June 2021.
+                </p>
+                <div class="code">PC-MET-100581</div>
+            </div>
+        </div>
+
+        <!-- win popup -->
+        <section class="win-popup game-popup">
+            <div class="popup-img">
+                <img src="./game-assets/images/1x/Asset13.png" alt="" class="img-fluid">
+            </div>
+        </section>
+
+        <!-- gameover popup -->
+        <section class="gameover-popup game-popup">
+            <div class="pop-content">
+                <div class="popup-img">
+                    <img src="./game-assets/images/1x/Asset14.png" alt="" class="img-fluid">
+                </div>
+                <div class="text-center">
+                    <button id="try-again" class="btn try-again">
+                        <img src="./game-assets/images/1x/Asset15.png" alt="" class="img-fluid">
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <audio id="background">
+        <source src="./game-assets/sounds/background.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="correct">
+        <source src="./game-assets/sounds/correct.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="win">
+        <source src="./game-assets/sounds/win.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="lose">
+        <source src="./game-assets/sounds/lose.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+
+    <script src="./game-assets/js/jquery.min.js"></script>
+    <script src="./game-assets/js/popper.min.js"></script>
+    <script src="./game-assets/js/bootstrap.min.js"></script>
+    <script src="./game-assets/js/main.js"></script>
+    <script src="./game-assets/js/game.js"></script>
+    <script src="./game-assets/js/addtional.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,258 @@
+*{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+html,
+body{
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-y:auto;
+    background-color: #FFF;
+}
+body,main{
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.score-container,
+.time-container{
+  position: absolute;
+  top: 1rem;
+  height: fit-content;
+  width: 25vw;
+  max-width: 200px;
+}
+
+.time-container{
+  right: 1rem;
+}
+.score-container{
+  left: 1rem;
+}
+
+.score-container >div,
+.time-container >div{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding-left: 37%;
+  display: flex;
+  align-items: center;
+  font-family: 'Roboto-Bold',sans-serif;
+  font-weight: bold;
+  color: #FFF;
+  text-align: center;
+  font-size: 1.5vw;
+}
+.time-container .time{
+  padding-bottom: 3%;
+  padding-left: 41%;
+}
+
+
+
+.game-page{
+    background-image: url(../images/game/game-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+}
+
+
+.main-container{
+  position: relative;
+  width: 100%;
+  margin: auto;
+  height: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.content{
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+
+
+.memory-game {
+  width: 40%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+  position: relative;
+  z-index: 3;
+  max-width: 900px;
+  padding-top: 7%;
+}
+.frame-img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: fit-content;
+    align-items: center;
+    z-index: 1;
+    width: 45%;
+}
+.frame-img .memory-card{
+    visibility: hidden;
+}
+
+.memory-card {
+  flex: auto;
+  max-width: calc(100% / 6);
+  margin: 0;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .5s;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0 , .3);
+  height: fit-content;
+  user-select: none;
+}
+
+.memory-card:active {
+  transform: scale(0.97);
+  transition: transform .2s;
+}
+
+.memory-card.flip {
+  transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  position: absolute;
+  border-radius: 0;
+  background: #1C7CCC;
+  backface-visibility: hidden;
+}
+.back-face{
+    position: relative;
+    height: fit-content;
+}
+
+.front-face {
+  transform: rotateY(180deg);
+}
+
+.game-title{
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  margin-top: -3%;
+  width: 60%;
+  max-width: 370px;
+}
+
+.animated {
+    z-index: 100;
+    animation: scale-in-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+/* win and gameover popups */
+.game-popup{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0,0,0,.8);
+  z-index: 999;
+  padding: 2rem;
+}
+.game-popup .popup-img{
+  width: 65%;
+  max-width: 800px;
+}
+
+.gameover-popup{
+  display: none;
+}
+.win-popup{
+  display: none;
+}
+
+.try-again{
+  width: 45%;
+  max-width: 250px;
+  margin: auto;
+}
+
+
+
+/* media */
+
+@media (max-width:992px)  {
+  .memory-game{
+    width: 38%;
+  }
+  .frame-img{
+    width: 43%;
+  }
+  .score-container, .time-container{
+    width: 20vw;
+  }
+  .score-container >div, .time-container >div{
+    font-size: 2.2vw;
+  }
+  .game-popup .popup-img{
+    width: 70%;
+    max-width: 450px;
+  }
+} 
+
+
+@media (max-width:768px) and (orientation:portrait) {
+  .memory-game{
+    width: 85%;
+  }
+  .frame-img{
+    width: 95%;
+  }
+  .game-title{
+    margin-top: -18%;
+    width: 75%;
+  }
+  .score-container, .time-container{
+    width: 35vw;
+  }
+  .score-container >div, .time-container >div{
+    font-size: 4vw;
+  }
+  .game-popup .popup-img{
+    width: 98%;
+  }
+
+  .try-again{
+    width: 55%;
+    }
+}
