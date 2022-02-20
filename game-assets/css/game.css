@@ -327,12 +327,14 @@ main {
 }
 .win-popup .text-game {
     margin-top: 0;
+    width: 100%;
 }
 .win-popup .text-game .left-text {
     width: 100%;
 }
 .win-popup .text-game .code {
     position: relative;
+    margin-top: 10px;
     right: 0;
     bottom: 0;
 }
@@ -340,7 +342,13 @@ main {
     display: none;
     text-align: center;
 }
-
+.gameover-popup .code {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    color: #fff;
+    font-size: 12px;
+}
 .win-popup {
     display: none
 }

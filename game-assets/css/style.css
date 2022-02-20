@@ -175,6 +175,13 @@ select:-webkit-autofill:focus {
   background-size: cover;
 }
 
+.login-page .content .code {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  font-size: 12px;
+  color: #fff;
+}
 /* 
 .login-form{
   max-width: 53%;
