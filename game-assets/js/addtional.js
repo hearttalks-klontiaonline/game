@@ -93,6 +93,9 @@ function winUser()
 {
     winMusic.play()
     $('.win-popup').css('display' , 'flex');
+    setTimeout(function (){
+        location.reload()
+    },5000);
 }
 
 function lose()
